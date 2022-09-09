@@ -1,17 +1,17 @@
-package dev.talosdx.plugins
+package dev.talosdx.example.plugins
 
-import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.resources.*
+import io.ktor.server.application.*
 import io.ktor.server.plugins.autohead.*
 import io.ktor.server.plugins.doublereceive.*
-import io.ktor.server.resources.*
 import io.ktor.server.plugins.statuspages.*
-import io.ktor.server.http.content.*
-import io.ktor.server.application.*
-import io.ktor.server.response.*
 import io.ktor.server.request.*
+import io.ktor.server.resources.*
 import io.ktor.server.resources.Resources
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
+import kotlinx.serialization.Serializable
 
 fun Application.configureRouting() {
     install(AutoHeadResponse)
@@ -51,13 +51,18 @@ fun Application.configureRouting() {
     }
 }
 
+@Serializable
 @Resource("/location/{name}")
 class MyLocation(val name: String, val arg1: Int = 42, val arg2: String = "default")
+
+@Serializable
 @Resource("/type/{name}")
 data class Type(val name: String) {
+    @Serializable
     @Resource("/edit")
     data class Edit(val type: Type)
 
+    @Serializable
     @Resource("/list/{page}")
     data class List(val type: Type, val page: Int)
 }

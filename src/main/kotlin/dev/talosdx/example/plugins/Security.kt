@@ -1,12 +1,14 @@
-package dev.talosdx.plugins
+package dev.talosdx.example.plugins
 
-import io.ktor.server.auth.*
-import io.ktor.util.*
-import io.ktor.server.sessions.*
 import io.ktor.server.application.*
+import io.ktor.server.auth.*
 import io.ktor.server.response.*
-import io.ktor.server.request.*
 import io.ktor.server.routing.*
+import io.ktor.server.sessions.*
+import io.ktor.util.*
+import kotlin.collections.Map
+import kotlin.collections.mapOf
+import kotlin.collections.set
 
 fun Application.configureSecurity() {
 

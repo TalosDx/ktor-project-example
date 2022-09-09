@@ -1,11 +1,11 @@
-package dev.talosdx.plugins
+package dev.talosdx.example.plugins
 
-import io.ktor.server.plugins.callloging.*
-import org.slf4j.event.*
-import io.ktor.server.request.*
 import io.ktor.http.*
-import io.ktor.server.plugins.callid.*
 import io.ktor.server.application.*
+import io.ktor.server.plugins.callid.*
+import io.ktor.server.plugins.callloging.*
+import io.ktor.server.request.*
+import org.slf4j.event.Level
 
 fun Application.configureMonitoring() {
     install(CallLogging) {
