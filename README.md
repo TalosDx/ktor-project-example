@@ -3,10 +3,12 @@ Tired of building and configuring dependencies from scratch each time. Therefore
 
 # What inside?
 - Ktor
-- Koin
+- Koin (DI, for now without annotation)
 - JUnit5
 - TestContainers (in progress...)
-- Kotlin Logging (SLF4j Api + Logback Core)
-- Exposed
-- Postgres JDBC
+- Kotlin Logging 
+  - Frontend: SLF4j Api
+  - Backend: Logback (default configs in progress..)
+- Exposed (default configs & tests in progress...)
+  - Postgres JDBC
 - Gradle Kotlin DSL
