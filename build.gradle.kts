@@ -83,12 +83,18 @@ dependencies {
     implementation("org.postgresql:postgresql:$postgresVersion")
 
     // Testing
+
+//    fixme waiting for new release of koin (3.3.0)
+//    https://github.com/InsertKoinIO/koin/issues/1390
+//    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
+//    testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
+//    testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 
     testImplementation("io.insert-koin:koin-test:$koinVersion")
     testImplementation("io.insert-koin:koin-test-junit5:$koinVersion")
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
 }
 
 tasks.withType<Test> {
