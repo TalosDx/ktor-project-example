@@ -12,3 +12,5 @@ Tired of building and configuring dependencies from scratch each time. Therefore
 - Exposed (default configs & tests in progress...)
   - Postgres JDBC
 - Gradle Kotlin DSL
+- Dockerfile
+- Docker Compose (build & run, required test)
