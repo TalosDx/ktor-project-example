@@ -1,1 +1,1 @@
-rootProject.name = "ktor-telegram-calendar"
+rootProject.name = "ktor-jvm-app-template"
