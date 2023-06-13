@@ -4,7 +4,7 @@ Tired of building and configuring dependencies from scratch each time. Therefore
 # What inside?
 - [x] Ktor
 - [x] Koin (DI with annotations like Spring)
-- [ ] Koin Test (wait support Kotlin 1.8.10)
+- [X] Koin Test
 - [x] JUnit5
 - [ ] TestContainers (in progress...)
 - [x] Kotlin Logging 
